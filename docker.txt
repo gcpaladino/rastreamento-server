@@ -1,0 +1,14 @@
+sudo docker build --pull --rm -f "prioritaria_server/dockerfile-e3.docker" -t prioritaria-e3:latest "prioritaria_server"
+sudo docker run -d --restart always -p 7098:7098/tcp prioritaria-e3:latest
+
+sudo docker build --pull --rm -f "prioritaria_server/dockerfile-gt02.docker" -t prioritaria-gt02:latest "prioritaria_server"
+sudo docker run -d --restart always  -p 7098:7098/tcp prioritaria-gt02:latest
+
+sudo docker build --pull --rm -f "prioritaria_server/dockerfile-tk311.docker" -t prioritaria-tk311:latest "prioritaria_server"
+sudo docker run -d --restart always  -p 7098:7098/tcp prioritaria-tk311:latest
+
+sudo docker build --pull --rm -f "prioritaria_server/dockerfile-teltonika.docker" -t prioritaria-teltonika:latest "prioritaria_server"
+sudo docker run -d --restart always  -p 7098:7098/tcp prioritaria-teltonika:latest
+
+sudo docker build --pull --rm -f "prioritaria_server/dockerfile-nt20.docker" -t prioritaria-nt20:latest "prioritaria_server"
+sudo docker run -d --restart always  -p 7098:7098/tcp prioritaria-nt20:latest
